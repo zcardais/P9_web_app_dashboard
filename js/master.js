@@ -8,37 +8,37 @@ $(document).ready(function() {
       labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
       datasets: [
       {
-          label: "TRAFFIC",
-          fill: true,
-          lineTension: 0.1,
-          backgroundColor: "rgba(222, 223, 244, 1)",
-          borderColor: "rgba(162, 166, 226, 1)",
-          borderCapStyle: 'butt',
-          borderDash: [],
-          borderDashOffset: 0.0,
-          borderJoinStyle: 'miter',
-          pointBorderColor: "rgba(103, 107, 182, 1)",
-          pointBackgroundColor: "#fff",
-          pointBorderWidth: 1,
-          pointHoverRadius: 5,
-          pointHoverBackgroundColor: "rgba(99, 105, 207, 1)",
-          pointHoverBorderColor: "rgba(220,220,220,1)",
-          pointHoverBorderWidth: 2,
-          pointRadius: 5,
-          pointHitRadius: 10,
-          data: [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250],
-      }
+        label: "TRAFFIC",
+    fill: true,
+    lineTension: 0.1,
+    backgroundColor: "rgba(226, 227, 246, .5)",
+    borderWidth: 1,
+    borderColor: "rgba(169, 172, 229, 1)",
+    borderCapStyle: 'butt',
+    borderDash: [],
+    borderDashOffset: 0.0,
+    borderJoinStyle: 'miter',
+    pointBorderColor: "rgba(116, 120, 191, 1)",
+    pointBackgroundColor: "#fff",
+    pointBorderWidth: 2,
+    pointHoverRadius: 5,
+    pointHoverBackgroundColor: "rgba(90, 96, 208, .7)",
+    pointHoverBorderWidth: 2,
+    pointRadius: 4,
+    pointHitRadius: 10,
+    data: [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250],
+  }
       ]
   };
 
-  var option = {
-    // Options go here
-};
+  var options = {
+    showLines: true,
+  };
 
   var myLineChart = Chart.Line(ctxl,{
     type: 'line',
     data:dataLine,
-    options:option
+    options:options
   })
 
 
@@ -52,23 +52,32 @@ $(document).ready(function() {
           datasets: [{
               label: 'DAILY TRAFFIC',
               data: [75, 100, 175, 125, 225, 200, 100],
-              backgroundColor: [
-              'rgba(104, 108, 183, 0.8)',
-              'rgba(104, 108, 183, 0.8)',
-              'rgba(104, 108, 183, 0.8)',
-              'rgba(104, 108, 183, 0.8)',
-              'rgba(104, 108, 183, 0.8)',
-              'rgba(104, 108, 183, 0.8)',
-              'rgba(104, 108, 183, 0.8)'
-              ],
+              backgroundColor:[
+                'rgba(115, 119, 191, .5)',
+                'rgba(115, 119, 191, .5)',
+                'rgba(115, 119, 191, .5)',
+                'rgba(115, 119, 191, .5)',
+                'rgba(115, 119, 191, .5)',
+                'rgba(115, 119, 191, .5)',
+                'rgba(115, 119, 191, .5)'
+                ],
+              hoverBackgroundColor:[
+                'rgba(90, 96, 208, .7)',
+                'rgba(90, 96, 208, .7)',
+                'rgba(90, 96, 208, .7)',
+                'rgba(90, 96, 208, .7)',
+                'rgba(90, 96, 208, .7)',
+                'rgba(90, 96, 208, .7)',
+                'rgba(90, 96, 208, .7)'
+                ],
               borderColor: [
-              'rgba(104, 108, 183, 1)',
-              'rgba(104, 108, 183, 1)',
-              'rgba(104, 108, 183, 1)',
-              'rgba(104, 108, 183, 1)',
-              'rgba(104, 108, 183, 1)',
-              'rgba(104, 108, 183, 1)',
-              'rgba(104, 108, 183, 1)'
+                'rgba(115, 119, 191, 1)',
+                'rgba(115, 119, 191, 1)',
+                'rgba(115, 119, 191, 1)',
+                'rgba(115, 119, 191, 1)',
+                'rgba(115, 119, 191, 1)',
+                'rgba(115, 119, 191, 1)',
+                'rgba(115, 119, 191, 1)'
               ],
               borderWidth: 1
           }]
