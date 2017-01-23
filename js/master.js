@@ -151,3 +151,9 @@ $(document).ready(function() {
       }
     });
   });
+
+  window.onload = alertMessage;
+
+  function alertMessage() {
+    document.getElementById('alertMessage').innerHTML = "<strong>Alert</strong> Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ulticies vehicular ut id elit. Curabitur blandit tempus porttitor.";
+  }

@@ -117,19 +117,15 @@ a {
 .alert-box {
     background-color: #7377bf;
     color: white;
-    border-radius: 3px;
+    border-radius: 5px;
     margin: 1em 0;
 }
 
-.alert-text {
-    font-size: 1rem;
-    padding: 1.1rem 0.5rem;
+#alertMessage {
+    font-size: .8rem;
+    padding: 1rem 0.5rem;
     color: #fff;
     font-weight: 200;
-}
-
-#alert-strong {
-    font-weight: 700;
 }
 
 .page-title {
@@ -397,6 +393,7 @@ button[type="submit"]:hover {
 }
 
 .styled-select select {
+    display: block;
     background: transparent;
     width: 100%;
     padding: 5px;
