@@ -298,6 +298,26 @@ td.member-email a {
 
 /* Forms */
 
+input, textarea, select {
+    font-size: 1rem;
+    font-weight: 300;
+    border: none;
+    height: 3em;
+    padding: .5em;
+    outline: 0;
+    background: #fbfbfb;
+    color: #bebebe;
+    margin-bottom: 1.2em;
+    border-radius: .3em;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.05);
+    background-color: #fbfbfb;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+input:focus, textarea:focus, select:focus {
+    border: 2px solid #4D4C72;
+}
+
 .search-form {
     display: flex;
     flex-direction: column;
@@ -311,45 +331,25 @@ td.member-email a {
     flex-wrap: wrap;
 }
 
-input[type="search"] {
-    box-sizing: border-box;
-    color: #bebebe;
-    background: #fbfbfb;
+input[type="search"], #message {
+    /*color: #bebebe;*/
+    /*background: #fbfbfb;*/
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding: 0.75em;
-    border: 1px solid #d1d1d1;
-    border-radius: 5px;
-    font-size: 1.1em;
     text-decoration: none;
     line-height: normal;
-    margin: .5em 0;
     /*   Flexbox */
     flex: 2 0 3em;
 }
 
 #message {
-    box-sizing: border-box;
-    color: #bebebe;
-    background: #fbfbfb;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding: 0.75em;
-    border: 1px solid #d1d1d1;
-    border-radius: 5px;
-    font-size: 1.1em;
-    text-decoration: none;
-    line-height: normal;
     resize: none;
-    margin: .5em 0;
     /*   Flexbox */
     flex: 2 0 7.5em;
 }
 
 button[type="submit"] {
-    box-sizing: border-box;
     border-radius: 4px;
     background: #7377bf;
     font-weight: 300;
@@ -392,28 +392,18 @@ button[type="submit"]:hover {
     width: calc(50% - .5em);
 }
 
-.styled-select select {
-    display: block;
-    background: transparent;
-    width: 100%;
-    padding: 5px;
-    font-size: 16px;
-    line-height: 1;
-    border: 0;
-    border-radius: 0;
-    height: 34px;
-    -webkit-appearance: none;
-}
-
-.styled-select {
+.settings select {
+    background: #fbfbfb url(../icons/expand-button.svg) no-repeat 98% 16px;
+    background-size: 15px 15px;
     color: #bebebe;
-    padding: 16px;
+    margin-bottom: 1.2em;
+    padding: 15px 45px 10px 10px;
+    height: 48px;
+    border-radius: .3em;
+    display: block;
     width: 100%;
+    line-height: 1;
     -webkit-appearance: none;
-    overflow: hidden;
-    border-radius: 5px;
-    border: 1px solid #d1d1d1;
-    background-color: #fbfbfb;
 }
 
 
