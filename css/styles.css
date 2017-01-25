@@ -37,7 +37,7 @@ a {
 }
 
 .menuwrap {
-    width: 10%;
+    width: 5%;
     background-color: #4d4c72;
     min-height: 2.75rem;
     display: flex;
@@ -82,9 +82,26 @@ a {
 .icon-bell {
     height: 1.2rem;
     fill: #fff;
-    stroke: #fff;
     padding-right: 1rem;
     border-right: 1px solid #5d61bf;
+}
+
+.icon-bell:hover {
+    stroke: #fff;
+}
+
+#notification {
+    position: relative;
+}
+
+#dotNotification {
+    width: 5px;
+    height: 5px;
+    background-color: #85db81;
+    position: absolute;
+    bottom: 22px;
+    left: 20px;
+    border-radius: 50%;
 }
 
 .profile {
@@ -96,9 +113,8 @@ a {
 /* VERTICAL MENUBAR */
 
 .icon {
-    height: 2rem;
+    height: 1.85rem;
     fill: #9c9cb0;
-    stroke: #9c9cb0;
 }
 
 .icon:hover {
@@ -108,7 +124,26 @@ a {
 
 .active {
     fill: #fff;
+}
+
+.active:hover {
+    fill: #fff;
     stroke: #fff;
+}
+
+#top {
+    position: relative;
+}
+
+#barNotification {
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 3.5rem;
+    width: .2rem;
+    background: #85db81;
 }
 
 
