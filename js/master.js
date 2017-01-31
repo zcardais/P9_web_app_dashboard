@@ -156,4 +156,18 @@ $(document).ready(function() {
 
   function alertMessage() {
     document.getElementById('alertMessage').innerHTML = "<strong>Alert</strong> Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ulticies vehicular ut id elit. Curabitur blandit tempus porttitor.";
-  }
+
+    var closeButton = document.getElementById('dismiss');
+    closeButton.addEventListener('click', function(){
+      var alertBar = document.getElementById('alertBar');
+      alertBar.parentNode.removeChild(alertBar);
+    })
+
+    var notifications = $('#notifications');
+    notifications.addClass('hidden');
+
+    var toggleNotifications = $('#notification');
+    toggleNotifications.on('click', function(){
+      notifications.toggleClass('hidden');
+    })
+}
