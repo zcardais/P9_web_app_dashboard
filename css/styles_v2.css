@@ -10,6 +10,10 @@
 
 /*MOBILE-FIRST*/
 
+.logo {
+    color: white;
+}
+
 .flex-container {
     display: -webkit-flex;
     display: flex;
@@ -28,8 +32,22 @@
     text-align: left;
 }
 
-header, footer {
+header {
     background: #7477bf;
+}
+
+footer {
+    background: #fbfbfb;
+    border: 1px solid #dbdbdb;
+}
+
+h2 {
+    font: 'Raleway', sans-serif;
+    color: #7e7d7d;
+}
+
+#light {
+    font-weight: 100;
 }
 
 .sidebar {
@@ -41,14 +59,14 @@ header, footer {
     padding: 0;
 }
 
+.topnav ul li, .sidebar ul li {
+    display: inline-block;
+    padding: 5px;
+}
+
 .sidebar ul a, .topnav ul a {
     text-decoration: none;
     color: white;
-}
-
-li {
-    display: inline-block;
-    padding: 5px;
 }
 
 
@@ -97,6 +115,34 @@ input, textarea, select {
     -webkit-transition: all 0.7s;
 }
 
+
+/* --------------------------
+  ALERT BOX
+--------------------------- */
+
+.alert {
+    margin: 10px;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #7377bf;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 1.1em;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
 @media only screen and (min-width: 768px) {
     header {
         display: -webkit-flex;
@@ -104,9 +150,16 @@ input, textarea, select {
         display: flex;
         align-items: baseline;
     }
+    nav.topnav {
+        margin-left: auto;
+    }
     .content {
-        padding-top: 0px;
+        padding-top: 0;
         padding-right: 0;
+        -webkit-flex: 5 0px;
+        flex: 5 0 px;
+        -webkit-order: 2;
+        order: 2;
     }
     .topnav ul li {
         display: inline;
@@ -118,11 +171,9 @@ input, textarea, select {
         -webkit-order: 1;
         order: 1;
     }
-    .content {
-        -webkit-flex: 5 0px;
-        flex: 5 0 px;
-        -webkit-order: 2;
-        order: 2;
+    .sidebar ul li {
+        display: block;
+        padding: 5px;
     }
     footer {
         -webkit-order: 3;
@@ -149,4 +200,13 @@ input, textarea, select {
         margin: 20px 20px 20px auto;
         width: 50%;
     }
+    /* --------------------------
+      ALERT BAR
+    --------------------------- */
+    .alert {
+        margin: 20px;
+    }
+}
+
+
 }

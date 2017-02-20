@@ -13,7 +13,7 @@
     <body>
       <div class="flex-container">
         <header>
-          <h1>MyApp&trade;</h1>
+          <h1 class="logo">My<span id="light">App</span>&trade;</h1>
           <nav class="topnav">
             <ul>
               <li><a href="#">icon-bell.svg</a></li>
@@ -36,7 +36,7 @@
           <div class="wrapper-tab-search">
 
             <div class="wrapper-tab">
-              <h2>DASHBOARD</h2>
+              <h2>Dashboard</h2>
             </div>
 
             <div class="wrapper-search-bar">
@@ -47,6 +47,23 @@
             </div>
           </div>
 
+          <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Alert!</strong> You have new reports! Click the charts below for more detail.
+          </div>
+
+          <div class="wrapper-web-traffic">
+            <div class="grouped">
+              <h3 class="widget-title">Web Traffic</h3>
+              <nav id="datasets-options">
+                <a href="#" id="hourly-btn" class="chart-option-btn">Hourly</a>
+                <a href="#" id="daily-btn" class="chart-option-btn">Daily</a>
+                <a href="#" id="weekly-btn" class="chart-option-btn active">Weekly</a>
+                <a href="#" id="monthly-btn" class="chart-option-btn">Monthly</a>
+              </nav>
+            </div>
+            <canvas id="web-traffic-line-chart" width="300" height="200"></canvas>
+          </div>
 
 
           <!-- INSERT SECTION ROWS INSIDE HERE -->
