@@ -46,6 +46,12 @@ h2 {
     color: #7e7d7d;
 }
 
+canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 350px;
+}
+
 #light {
     font-weight: 100;
 }
@@ -143,6 +149,49 @@ input, textarea, select {
     color: black;
 }
 
+
+/* --------------------------
+  WRAPPER-WEB-TRAFFIC
+--------------------------- */
+
+.wrapper-web-traffic, .wrapper-daily-traffic, .wrapper-source-traffic, .wrapper-socmed-stats, .wrapper-new-member, .wrapper-recent-activities, .wrapper-message, .wrapper-settings {
+    border-bottom: 1px dashed #e2e2e2;
+    padding: 1em;
+}
+
+.grouped {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2em;
+}
+
+.widget-title {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1em;
+    flex: 1 100%;
+}
+
+#datasets-options {
+    flex: 1 100%;
+    text-align: center;
+}
+
+#datasets-options a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #929292;
+    padding: 3px 10px;
+}
+
+#datasets-options .active {
+    background-color: #81c98f;
+    color: #fff;
+    border-radius: 10px;
+}
+
 @media only screen and (min-width: 768px) {
     header {
         display: -webkit-flex;
@@ -206,7 +255,26 @@ input, textarea, select {
     .alert {
         margin: 20px;
     }
+    /* --------------------------
+      WRAPPER-WEB-TRAFFIC
+    --------------------------- */
+    .wrapper-web-traffic, .wrapper-socmed-stats, .wrapper-tab-search {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    .grouped {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #datasets-options {
+        text-align: right;
+    }
 }
 
-
+@media only screen and (min-width: 1024px) {
+    canvas {
+        max-height: 500px;
+    }
 }
