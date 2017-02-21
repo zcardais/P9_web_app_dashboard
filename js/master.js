@@ -1,3 +1,13 @@
+// OPTIONS
+var legend_options = {
+  display: true,
+  position: "bottom",
+  labels: {
+    fontFamily: 'Raleway, sans-serif',
+    boxWidth: 10
+  }
+};
+
 $(document).ready(function() {
 
   // Line Chart

@@ -3,7 +3,7 @@ var legend_options = {
     display: true,
     position: "bottom",
     labels: {
-        fontFamily: 'Roboto, sans-serif',
+        fontFamily: 'Raleway, sans-serif',
         boxWidth: 10
     }
 };
