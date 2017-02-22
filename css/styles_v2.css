@@ -97,8 +97,19 @@ canvas {
     fill: white;
 }
 
+.icon:hover {
+    stroke: white;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+}
+
 .profile {
     border-radius: 50%;
+}
+
+.profile:hover {
+    border: 1px solid white;
 }
 
 
@@ -200,6 +211,7 @@ input, textarea, select {
     font-size: 1em;
     -webkit-flex: 1 100%;
     flex: 1 100%;
+    color: #6b6b6b;
 }
 
 #datasets-options {
@@ -341,7 +353,4 @@ input, textarea, select {
     canvas {
         max-height: 500px;
     }
-}
-
-
 }
