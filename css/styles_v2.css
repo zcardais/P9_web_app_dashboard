@@ -192,7 +192,7 @@ input, textarea, select {
   WRAPPER-WEB-TRAFFIC
 --------------------------- */
 
-.wrapper-web-traffic, .wrapper-daily-traffic, .wrapper-source-traffic, .wrapper-socmed-stats, .wrapper-new-member, .wrapper-recent-activities, .wrapper-message, .wrapper-settings {
+.wrapper-web-traffic, .wrapper-daily-traffic, .wrapper-source-traffic, .wrapper-social-stats, .wrapper-new-member, .wrapper-recent-activities, .wrapper-message, .wrapper-settings {
     border-bottom: 1px dashed #e2e2e2;
     padding: 1em;
 }
@@ -231,6 +231,63 @@ input, textarea, select {
     background-color: #81c98f;
     color: #fff;
     border-radius: 10px;
+}
+
+
+/* --------------------------
+  WRAPPER-SOCIAL-STATS
+--------------------------- */
+
+.wrapper-social-stats {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-stats {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em;
+    background-color: #fbfbfb;
+    border-radius: 5px;
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.social-stats .badge {
+    background-color: #7377bf;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.social-icons {
+    fill: #fff;
+    width: 70px;
+    margin-top: 5px;
+}
+
+.social-stats .stats h5 {
+    font-size: 1.1em;
+    margin: 0;
+    color: #7477bf;
+}
+
+.social-stats .stats span {
+    font-size: 2.2em;
+    color: #666;
 }
 
 @media only screen and (min-width: 768px) {
@@ -324,7 +381,7 @@ input, textarea, select {
     /* --------------------------
       WRAPPER-WEB-TRAFFIC
     --------------------------- */
-    .wrapper-web-traffic, .wrapper-socmed-stats, .wrapper-tab-search {
+    .wrapper-web-traffic, .wrapper-social-stats, .wrapper-tab-search {
         flex-basis: 100%;
         width: 100%;
     }
@@ -347,10 +404,27 @@ input, textarea, select {
         -webkit-flex: 0 50%;
         flex: 0 50%;
     }
+    /* --------------------------
+      WRAPPER-SOCIAL-STATS
+    --------------------------- */
+    .wrapper-social-stats {
+        flex-direction: row;
+    }
+    .social-stats {
+        /*flex-basis: 49%;*/
+        /*width: 49%;*/
+        /*margin-top: 10px;*/
+        border: 1px solid #d1d1d1;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
     canvas {
         max-height: 500px;
+    }
+    .social-stats {
+        flex-basis: 33%;
+        width: 33%;
+        margin-top: 5px;
     }
 }
