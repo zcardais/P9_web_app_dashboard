@@ -18,7 +18,7 @@
             <div class="top-logo"><strong>My</strong><span id="light">App</span>&trade;</div>
             <nav>
               <ul class="top-nav">
-                <li><a href="#">
+                <li><a href="#" id="notification">
                   <svg class="icon icon-bell" version="1.1" id="Layer_0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                     <g id="_x36__6_">
                       <g>
@@ -27,6 +27,8 @@
                       </g>
                     </g>
                   </svg>
+                  <span id="dotNotification"></span>
+                  <div id="notifications"><p>this is a notification</p><p>so is this</p></div>
                 </a></li>
                 <span id="pipe-separator">|</span>
                 <li><a href="#">
@@ -100,9 +102,11 @@
             </div>
           </div>
 
-          <div class="alert">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-            <strong>Alert!</strong> You have new reports! Click the charts below for more detail.
+          <div class="alert" id="alert">
+            <span id="alert-message"><strong>Alert!</strong> You have new reports! Click the charts below for more detail.</span>
+            <a class="closebtn" id="closebtn">&times;</span></a>
+            <!-- Alternatively, you could add an onclick event directly to the a#closebutton element to hide it: -->
+            <!-- <a class="closebtn" id="closebtn" onclick="this.parentElement.style.display='none';">&times;</span></a> -->
           </div>
 
           <div class="wrapper-web-traffic">
@@ -236,9 +240,6 @@
           <div class="wrapper-settings">
 
           </div>
-
-
-
 
           <!-- INSERT SECTION ROWS INSIDE HERE -->
         </main>

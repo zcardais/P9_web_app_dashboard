@@ -207,3 +207,16 @@ var donut_chart = new Chart(donut_chart_area, {
     }
   }
 });
+
+// CLOSE ALERT DIV ON CLICK
+ $("#closebtn").click(function() {
+     $("#alert").fadeOut("slow");
+ });
+
+ var notifications = $('#notifications');
+ notifications.addClass('hidden');
+
+ var toggleNotifications = $('#notification');
+ toggleNotifications.on('click', function(){
+   notifications.toggleClass('hidden');
+ })

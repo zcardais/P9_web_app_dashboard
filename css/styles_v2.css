@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+.hidden {
+    display: none;
+}
+
 body {
     font-size: 0.9em;
     font-weight: 300;
@@ -95,6 +99,10 @@ ul.top-nav li, .sidebar ul li {
 
 .icon-bell {
     margin-right: 10px;
+}
+
+#notification {
+    position: relative;
 }
 
 #pipe-separator {
@@ -206,19 +214,21 @@ input, textarea, select {
 --------------------------- */
 
 .alert {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
     margin: 10px;
     border-radius: 5px;
     padding: 10px;
     background-color: #7377bf;
     color: white;
-    text-align: center;
 }
 
 .closebtn {
-    margin-left: 15px;
+    margin-left: auto;
     color: white;
-    font-weight: bold;
-    float: right;
+    font-weight: 700;
     font-size: 1.1em;
     line-height: 20px;
     cursor: pointer;
@@ -406,6 +416,15 @@ input, textarea, select {
     nav.topnav {
         margin-left: auto;
         align-self: center;
+    }
+    #dotNotification {
+        width: 6px;
+        height: 6px;
+        background-color: #85db81;
+        position: absolute;
+        bottom: 32px;
+        left: 25px;
+        border-radius: 50%;
     }
     .content {
         flex-direction: row;
