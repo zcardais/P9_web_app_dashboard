@@ -406,6 +406,152 @@ input, textarea, select {
     color: #7477bf;
 }
 
+
+/* --------------------------
+  WRAPPER-MESSAGE
+--------------------------- */
+
+fieldset {
+    outline: 0;
+    border: 0;
+}
+
+legend {
+    display: none;
+}
+
+input, textarea, select {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: #fbfbfb;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    box-shadow: none;
+    padding: 10px;
+    -webkit-transition: all 0.7s;
+    transition: al 0.7s;
+}
+
+#message-form-alert {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    background: #ffdb99;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 3px;
+    border: 0;
+    border-bottom: 2px solid #4d4c72;
+    background-color: #7377bf;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+button:focus {
+    outline: none;
+    border: 1px solid #000;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+/* --------------------------
+  WRAPPER-MESSAGE
+--------------------------- */
+
+#user-settings-form .option {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#user-settings-form .option .label {
+    width: 60%;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+#user-settings-form select {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+button#btn-settings-save, button#btn-settings-cancel {
+    width: 48%;
+}
+
+button#btn-settings-cancel {
+    background-color: #b2b2b2;
+    border-bottom: 2px solid #666565;
+    color: #fff;
+    float: right;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider.round {
+    border-radius: 18px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:checked+.slider::before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
 @media only screen and (min-width: 768px) {
     header {
         display: -webkit-flex;
@@ -535,6 +681,12 @@ input, textarea, select {
     --------------------------- */
     /* --------------------------
       WRAPPER-RECENT-ACTIVITY
+    --------------------------- */
+    /* --------------------------
+      WRAPPER-MESSAGE
+    --------------------------- */
+    /* --------------------------
+      WRAPPER-MESSAGE
     --------------------------- */
 }
 
