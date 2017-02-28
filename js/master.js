@@ -121,24 +121,38 @@ $("#datasets-options a").click(function(event) {
     $("#hourly-btn").click(function(event) {
         event.preventDefault(event);
         line_chart.config.data = hourly_data;
+        // line_chart.scaleService.updateScaleDefaults('linear', {
+        //   ticks: {
+        //     max: 300
+        //   }
+        // })
+        line_chart.options.scales.yAxes[0].ticks.max = 300;
+        line_chart.options.scales.yAxes[0].ticks.stepSize = 50;
+        console.log(line_chart);
         line_chart.update();
     });
 
     $("#daily-btn").click(function(event) {
         event.preventDefault(event);
         line_chart.config.data = daily_data;
+        line_chart.options.scales.yAxes[0].ticks.max = 25000;
+        line_chart.options.scales.yAxes[0].ticks.stepSize = 5000;
         line_chart.update();
     });
 
     $("#weekly-btn").click(function(event) {
         event.preventDefault(event);
         line_chart.config.data = weekly_data;
+        line_chart.options.scales.yAxes[0].ticks.max = 25000;
+        line_chart.options.scales.yAxes[0].ticks.stepSize = 5000;
         line_chart.update();
     });
 
     $("#monthly-btn").click(function(event) {
         event.preventDefault(event);
         line_chart.config.data = monthly_data;
+        line_chart.options.scales.yAxes[0].ticks.max = 25000;
+        line_chart.options.scales.yAxes[0].ticks.stepSize = 5000;
         line_chart.update();
     });
 
