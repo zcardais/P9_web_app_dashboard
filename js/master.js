@@ -233,7 +233,7 @@ var donut_chart = new Chart(donut_chart_area, {
  var toggleNotifications = $('#notification');
  toggleNotifications.on('click', function(){
    notifications.toggleClass('hidden');
- })
+ });
 
 
  // SHOW THE MODAL DIALOG BOX WHEN THE BELL ICON IS CLICKED
