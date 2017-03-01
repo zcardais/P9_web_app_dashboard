@@ -222,6 +222,12 @@ var donut_chart = new Chart(donut_chart_area, {
   }
 });
 
+// SHOW THE MODAL DIALOG BOX WHEN THE BELL ICON IS CLICKED
+$( "#dialog" ).dialog({ autoOpen: false });
+$( "#opener" ).click(function() {
+  $( "#dialog" ).dialog( "open" );
+});
+
 // CLOSE ALERT DIV ON CLICK
  $("#closebtn").click(function() {
      $("#alert").fadeOut("slow");
@@ -235,9 +241,25 @@ var donut_chart = new Chart(donut_chart_area, {
    notifications.toggleClass('hidden');
  });
 
+ // MESSAGE USER FORM VALIDATION
+ $('#btn-message-send').click(function(event){
+     event.preventDefault(event);
+     if($.trim($('#user-message').val()) === '' || $.trim($('#user-name-search').val()) === ''){
+         $( "#message-form-alert" ).css('background-color', '#BF7377');
+         $( "#message-form-alert" ).html('Username and message are required!')
+              .fadeIn( "fast" );
+    } else {
+     // Show success message, fade in then fade out
+         $( "#message-form-alert" ).css('background-color', '#77BF73');
+         $( "#message-form-alert" ).html('SUCCESS! Message sent!')
+             .fadeIn( "fast" )
+             .delay(1000)
+             .fadeOut('slow');
 
- // SHOW THE MODAL DIALOG BOX WHEN THE BELL ICON IS CLICKED
- $( "#dialog" ).dialog({ autoOpen: false });
- $( "#opener" ).click(function() {
-   $( "#dialog" ).dialog( "open" );
+         // clear the textfields
+         $('#user-message').val('');
+         $('#user-name-search').val('');
+    }
+
+
  });
